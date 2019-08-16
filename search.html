@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>浏览器代理 &mdash; 代理使用手册 alpha 文档</title>
+  <title>搜索 &mdash; 代理使用手册 alpha 文档</title>
   
 
   
@@ -26,6 +26,7 @@
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="_static/searchtools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -35,8 +36,7 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="系统代理" href="system.html" /> 
+    <link rel="search" title="搜索" href="#" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -84,13 +84,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">说明</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="system.html">系统代理</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">浏览器代理</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#firefox">Firefox</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="browser.html">浏览器代理</a></li>
 </ul>
 
             
@@ -136,7 +133,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>浏览器代理</li>
+      <li>搜索</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,59 +150,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>浏览器代理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="firefox">
-<h2>Firefox<a class="headerlink" href="#firefox" title="永久链接至标题">¶</a></h2>
-<ol class="arabic simple">
-<li><p>点击火狐浏览器右上角的 <span class="guilabel">自定义及控制按钮</span>，在下拉框中选择 <span class="guilabel">自定义</span> 选项</p></li>
-</ol>
-<blockquote>
-<div><img alt="_images/自定义及控制按钮.png" src="_images/自定义及控制按钮.png" />
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>在左侧选择栏点击 <span class="guilabel">常规</span></p></li>
-</ol>
-<blockquote>
-<div><img alt="_images/常规.png" src="_images/常规.png" />
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>在 <span class="guilabel">常规</span> 页面中拉到最下方，在“网络设置”中点击 <span class="guilabel">设置</span></p></li>
-</ol>
-<blockquote>
-<div><img alt="_images/网络设置.png" src="_images/网络设置.png" />
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li><p>根据你的需要配置代理</p></li>
-</ol>
-<blockquote>
-<div><ul>
-<li><p>系统代理</p>
-<img alt="_images/系统代理.png" src="_images/系统代理.png" />
-</li>
-<li><p>手动代理</p>
-<img alt="_images/手动代理1.png" src="_images/手动代理1.png" />
-</li>
-<li><p>PAC</p>
-<img alt="_images/PAC代理.png" src="_images/PAC代理.png" />
-</li>
-</ul>
-</div></blockquote>
-</div>
-</div>
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search
+      functionality.
+    </p>
+  </div>
+  </noscript>
 
+  
+  <div id="search-results">
+  
+  </div>
 
            </div>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="system.html" class="btn btn-neutral float-left" title="系统代理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -238,7 +200,14 @@
   
   
     
+  
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
    
+
 
 </body>
 </html>
