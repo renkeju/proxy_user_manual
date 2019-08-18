@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   readme
+   README
    system
    browser
 
