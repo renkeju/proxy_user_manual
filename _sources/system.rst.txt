@@ -122,19 +122,39 @@ Ubuntu
 Linux
 ^^^^^^^^^^^^^^^
 
-在终端中执行下面的命令：
+如果在说明章节中可以查看到用户名与密码，则在终端中执行下面的命令：
 
-.. code-block:: bash
+.. parsed-literal::
 
   sudo cat << "EOF" > /etc/profile.d/proxy.sh
-  http_proxy=http://{{ proxy_username }}:{{ proxy_password }}@{{ proxy_address }}:{{ proxy_port }}
-  https_proxy=http://{{ proxy_username }}:{{ proxy_password }}@{{ proxy_address }}:{{ proxy_port }}
-  ftp_proxy=http://{{ proxy_username }}:{{ proxy_password }}@{{ proxy_address }}:{{ proxy_port }}
+
+  user="|proxy_username|"
+  password="|proxy_password|"
+  address="|proxy_address|"
+  port="|proxy_port|"
+
+  http_proxy=http://${user}:${password}@${address}:${port}
+  https_proxy=http://${user}:${password}@${address}:${port}
+  ftp_proxy=http://${user}:${password}@${address}:${port}
 
   export http_proxy https_proxy ftp_proxy
   EOF
 
-配置完成后重启主机或在终端中执行下面的命令：
+如果在说明章节中可以没有用户名与密码，则在终端中执行下面的命令：
+
+.. parsed-literal::
+
+  sudo cat << "EOF" > /etc/profile.d/proxy.sh
+
+  http_proxy=http://|proxy_address|:|proxy_port|
+  https_proxy=http://|proxy_address|:|proxy_port|
+  ftp_proxy=http://|proxy_address|:|proxy_port|
+
+  export http_proxy https_proxy ftp_proxy
+  EOF
+
+
+配置完成后 ``重启主机`` 或在终端中执行下面的命令：
 
 .. code-block:: bash
 

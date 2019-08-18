@@ -321,17 +321,30 @@
 </div>
 <div class="section" id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h2>
-<p>在终端中执行下面的命令：</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo cat &lt;&lt; <span class="s2">&quot;EOF&quot;</span> &gt; /etc/profile.d/proxy.sh
-<span class="nv">http_proxy</span><span class="o">=</span>http://<span class="o">{{</span> proxy_username <span class="o">}}</span>:<span class="o">{{</span> proxy_password <span class="o">}}</span>@<span class="o">{{</span> proxy_address <span class="o">}}</span>:<span class="o">{{</span> proxy_port <span class="o">}}</span>
-<span class="nv">https_proxy</span><span class="o">=</span>http://<span class="o">{{</span> proxy_username <span class="o">}}</span>:<span class="o">{{</span> proxy_password <span class="o">}}</span>@<span class="o">{{</span> proxy_address <span class="o">}}</span>:<span class="o">{{</span> proxy_port <span class="o">}}</span>
-<span class="nv">ftp_proxy</span><span class="o">=</span>http://<span class="o">{{</span> proxy_username <span class="o">}}</span>:<span class="o">{{</span> proxy_password <span class="o">}}</span>@<span class="o">{{</span> proxy_address <span class="o">}}</span>:<span class="o">{{</span> proxy_port <span class="o">}}</span>
+<p>如果在说明章节中可以查看到用户名与密码，则在终端中执行下面的命令：</p>
+<pre class="literal-block">sudo cat &lt;&lt; &quot;EOF&quot; &gt; /etc/profile.d/proxy.sh
 
-<span class="nb">export</span> http_proxy https_proxy ftp_proxy
-EOF
-</pre></div>
-</div>
-<p>配置完成后重启主机或在终端中执行下面的命令：</p>
+user=&quot;test&quot;
+password=&quot;test&quot;
+address=&quot;192.168.0.1&quot;
+port=&quot;8080&quot;
+
+http_proxy=http://${user}:<a class="reference external" href="mailto:${password}&#37;&#52;&#48;${address">${password}<span>&#64;</span>${address</a>}:${port}
+https_proxy=http://${user}:<a class="reference external" href="mailto:${password}&#37;&#52;&#48;${address">${password}<span>&#64;</span>${address</a>}:${port}
+ftp_proxy=http://${user}:<a class="reference external" href="mailto:${password}&#37;&#52;&#48;${address">${password}<span>&#64;</span>${address</a>}:${port}
+
+export http_proxy https_proxy ftp_proxy
+EOF</pre>
+<p>如果在说明章节中可以没有用户名与密码，则在终端中执行下面的命令：</p>
+<pre class="literal-block">sudo cat &lt;&lt; &quot;EOF&quot; &gt; /etc/profile.d/proxy.sh
+
+http_proxy=http://192.168.0.1:8080
+https_proxy=http://192.168.0.1:8080
+ftp_proxy=http://192.168.0.1:8080
+
+export http_proxy https_proxy ftp_proxy
+EOF</pre>
+<p>配置完成后 <code class="docutils literal notranslate"><span class="pre">重启主机</span></code> 或在终端中执行下面的命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo <span class="nb">source</span> /etc/profile
 </pre></div>
 </div>
