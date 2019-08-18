@@ -122,7 +122,7 @@ Ubuntu
 Linux
 ^^^^^^^^^^^^^^^
 
-如果在说明章节中可以查看到用户名与密码，则在终端中执行下面的命令：
+如果在说明章节中 :guilabel:`代理账号认证` 为开启，则在终端中执行下面的命令：
 
 .. parsed-literal::
 
@@ -140,7 +140,7 @@ Linux
   export http_proxy https_proxy ftp_proxy
   EOF
 
-如果在说明章节中可以没有用户名与密码，则在终端中执行下面的命令：
+如果在说明章节中 :guilabel:`代理账号认证` 为关闭，则在终端中执行下面的命令：
 
 .. parsed-literal::
 
